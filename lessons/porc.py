@@ -44,3 +44,13 @@ def count23(list3) -> dict[str, int]:
 
 
 count23(list3)
+
+first_row: dict[str, list[str]] = column_table
+    for column in first_row:
+        int_N: list = list()
+        for i in first_row:
+            int_N.append(first_row[column])
+        
+        result[column].append(first_row, int_N)
+
+    return result

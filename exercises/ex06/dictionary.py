@@ -4,16 +4,6 @@
 __author__: str = "730518639"
 
 
-n = int(input("Enter the number of elements in dictionary: "))
-
-dict1 = {}
-# Asks for number of key-values and adds to empty dictionary defined above.
-for i in range(n):
-    key = input("Enter a key: ")
-    value = input("Enter a value: ")
-    dict1.update({key: value})
-
-
 def invert(dict1: dict[str, str]) -> dict[str, str]:
     """Inverts a given dictionary."""
     inv_dict: dict = {}
@@ -22,19 +12,6 @@ def invert(dict1: dict[str, str]) -> dict[str, str]:
         inv_dict[val] = key
     print(inv_dict)
     return(inv_dict)
-
-
-invert(dict1)
-
-
-n1 = int(input("Enter the number of elements in dictionary: "))
-
-dict2 = {}
-# Asks for number of key-values and adds to empty dictionary defined above.
-for i in range(n1):
-    key = input("Enter a name: ")
-    value = input("Enter a color: ")
-    dict2.update({key: value})
 
 
 def favorite_color(dict2: dict[str, str]):
@@ -49,16 +26,12 @@ def favorite_color(dict2: dict[str, str]):
             print(max(mode_dict))
         else:
             list2: list = list(dict2.values())
-    print(list2[0])
+            print(list2[0])
     return(mode_dict)
+    
 
-
-favorite_color(dict2)
-
-list3 = list(input("Enter the number of elements in list: "))
-
-
-def count(list3: list = list()):
+def count(list3: list[str] = list()):
+    """Counts number of items."""
     empty_dict: dict = {}
     for item in list3:
         if (item in empty_dict):
@@ -68,6 +41,3 @@ def count(list3: list = list()):
 
     for key, value in empty_dict.items():
         print(key, value)
-
-
-count(list3)
