@@ -3,22 +3,34 @@
 __author__: str = "730518639"
 
 
-list1: list = list(input("Enter a list: "))
+def only_evens(input_list: list[int]) -> list[int]:
+    """Given a list of integers, returns a list composed of only even integers."""
+    empty_list: list[int] = list()
+    for i in input_list:
+        if i % 2 == 0:
+            empty_list.append(i)
+    return empty_list
 
 
-def only_evens(list1) -> list:
-    list2 = list()
-    for x in list1:
-        if x % 2 == 0:
-            list2.append(x)
-    return list2
-
-print(only_evens(list1))
-
-list1: list = list(input("Enter the first list: "))
-list2: list = list(input("Enter the second list: "))
-def concat(list1, list2) -> list:
-    new_list = list[list1+list2]
+def sub(a_list: list[int], int_1: int, int_2: int) -> list[int]:
+    """Given a list of ints, starting int and ending int, returns list from start to end, not inclusive."""
+    b_list: list[int] = list()
+    for i in a_list:
+        if len(a_list) == 0:
+            return b_list
+        else:
+            while a_list.index in range(int_1, int_2 - 1):
+                b_list.append(a_list[i])
+    return b_list
 
 
-print(concat(list1, list2))
+def concat(list_1: list[int], list_2: list[int]) -> list[int]:
+    """Combines two given lists of integers into one."""
+    list_3: list[int] = list()
+    for i in list_1:
+        while list_1.index in range(len(list_1)):
+            list_3.append(list_1[i])
+    for i in list_2:    
+        while list_2.index in range(len(list_2)):
+            list_3.append(list_2[i])
+    return list_3
